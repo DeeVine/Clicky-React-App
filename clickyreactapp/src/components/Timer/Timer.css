@@ -1,0 +1,9 @@
+.cards {
+  width: 24%;
+  text-align: center;
+  border: 5px solid red;
+  display: inline-block;
+  margin: 4px;
+  /*padding: 5px red;*/
+  overflow: hidden;
+}
