@@ -1,4 +1,11 @@
 .navbar {
-	background-color: blue;
-	color:white;
-}
+      width: 100%;
+      /*position: fixed;*/
+    }
+
+    .navbar li {
+      padding: 26px 0;
+      text-align: center;
+      width: 33%;
+      display: inline-block;
+    }
