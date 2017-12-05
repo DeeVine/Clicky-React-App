@@ -44,6 +44,10 @@ class Cards extends React.Component {
 			// console.log(this.state.array);
 			if(this.state.array[i] === prop) {
 	    		console.log('already exists');
+	    			if(this.state.score > this.state.topScore) {
+					this.state.topScore = this.state.score;
+				}
+
 	    		this.setState({
 	    			score: 0,
 					array: []
@@ -75,9 +79,10 @@ class Cards extends React.Component {
 
 	render() {
 		return(
-
 		  	 <div className='container'>
-		  	 <div>score: {this.state.score}</div>  
+		  	 <div>
+		  	 score: {this.state.score} Top score: {this.state.topScore}
+		  	 </div>  
 	        {
 	          this.state.srcArray.map((cards, i) =>            
 	            <div key={i} className='cards' onClick={() => this.handleClick(cards.id)}>
