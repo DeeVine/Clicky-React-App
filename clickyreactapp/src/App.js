@@ -8,16 +8,29 @@ import Clicky from "./components/Clicky";
 import cardlist from "./cards.json"
 import Counter from "./components/Counter";
 
+class App extends React.Component {
+	constructor() {
+        super();
+        this.state = {
+            score: 7,
+			array: [],
+			srcArray: [],
+			topScore: 0
+        };
+    }
 
-const App = () =>
-  // <Router>
-    <div>
 
-      <Navbar/>
-      <Header/>
-     
-      <Counter/>
-    </div>
+	render() {
+		return(
+			<div>
+		      <Navbar score = {this.state.score}/>
+		      <Header/>     
+		      <Cards/>
+		    </div>
+		);
+	}
+}
+    
   // </Router>;
 
 export default App;
