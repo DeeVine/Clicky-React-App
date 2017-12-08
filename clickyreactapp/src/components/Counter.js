@@ -56,7 +56,14 @@ class Counter extends React.Component {
   render() {
     return (
       <div className="panel panel-primary">
-        
+        <div className="panel-heading">Click Counter!</div>
+        <div className="panel-body text-center">
+        <div className="testing it out">Test div</div>
+          <p>Click Count: {this.state.count}</p>
+          <button className="btn btn-primary" onClick={this.handleIncrement}>
+            Increment
+          </button>
+        </div>
         <div className='container'>
         {
           cardlist.map((cards, i) =>            
